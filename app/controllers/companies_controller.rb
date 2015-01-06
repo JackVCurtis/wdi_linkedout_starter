@@ -6,7 +6,7 @@ class CompaniesController < ApplicationController
 	end
 
 	def show
-		@message = Message.new
+		@company = Company.find(params[:id])
 	end
 
 	def edit

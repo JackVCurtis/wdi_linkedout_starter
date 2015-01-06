@@ -2,8 +2,11 @@
 <p> <%= @company.desc %>  </p>
 
 <%= render 'partials/form_message' %> 
+
 <ul>
 	<% @company.messages.each do |message| %>
-	<li> <%= message.body %> by <%= message.author %>  </li>
+    <% if message.id %>
+      <li> <%= message.body %> by <%= message.author %>  </li>
+    <% end %>
 	<% end %> 
 </ul>
